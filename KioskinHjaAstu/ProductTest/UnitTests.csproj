@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="ProductTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeasonalProductTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

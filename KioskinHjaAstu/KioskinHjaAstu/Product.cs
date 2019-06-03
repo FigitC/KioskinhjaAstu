@@ -9,18 +9,16 @@ namespace KioskinHjaAstu
     public class Product
     {
         //Constructors
-        public Product(string name, double price, bool active)
-        {
+        public Product(string name, double price, bool active, bool canBeBoughtOnCredit){
             this.name = name;
             this.price = price;
             this.active = active;
+            this.canBeBoughtOnCredit = canBeBoughtOnCredit;           
+
+            productID = productCounter++;
 
         }
-        public Product(bool ccanBeBoughtOnCredit)
-        {
-            this.canBeBoughtOnCredit = canBeBoughtOnCredit;
-        }
-
+        
         //Class fields
         public int productID
         {
@@ -28,6 +26,7 @@ namespace KioskinHjaAstu
             set {  if(value >= 1) { _productID = value; } }
         }
         private int _productID;
+        private readonly int productCounter = 1;
         public string name
         {
             get { return _name; }
