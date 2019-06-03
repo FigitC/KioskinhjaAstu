@@ -44,15 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleUserInterface.cs" />
     <Compile Include="Product.cs" />
-    <Compile Include="Main.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterSystem.cs" />
     <Compile Include="SeasonalProduct.cs" />
-    <Compile Include="User.cs" />
     <Compile Include="Transaction.cs" />
-    <Compile Include="BuyTransaction.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="InsertCashTransaction.cs" />
+    <Compile Include="BuyTransaction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -12,14 +12,7 @@ namespace KioskinHjaAstu
         public int transactionID;
         public User transactionUser;
         public DateTime timeOfTransaction;
-        public decimal amount;
-
-        public Transaction(User transactionUser, decimal amount)
-        {
-            transactionID = transactionCount++;
-            this.transactionUser = transactionUser;
-            this.amount = amount;
-        }
+        public double amount;
 
         public abstract void Execute();
         public abstract override string ToString();
