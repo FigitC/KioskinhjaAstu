@@ -8,15 +8,6 @@ namespace KioskinHjaAstu
 {
     class BuyTransaction : Transaction
     {
-
-        
-
-
-
-
-
-
-
         public override void Execute()
         {
             throw new NotImplementedException();
