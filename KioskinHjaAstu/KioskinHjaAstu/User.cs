@@ -8,20 +8,27 @@ using System.Net.Mail;
 
 namespace KioskinHjaAstu
 {
+    public delegate string UserBalanceNotification(User user, double balance);
     public class User : IComparable
     {
         static int userCount = 0;
 
-        int userID;
+        public int userID;
         string firstName;
         string lastName;
         string userName;
         string email;
-        public decimal balance = 0;
+        public double balance = 0;
 
+        public delegate string UserBalanceNotification(User user, double balance);
+        UserBalanceNotification userBalanceNotification;
 
+        string NotifyUserBalance(User user, double balance)
+        {
+            return "User: " + user.userID.ToString() + "'s balance is: " + user.balance.ToString();
+        }
 
-        public User(string firstName, string lastName, string userName, string email, decimal balance)
+        public User(string firstName, string lastName, string userName, string email, double balance)
         {
             try
             {
@@ -46,6 +53,8 @@ namespace KioskinHjaAstu
                 }
 
                 this.balance = balance;
+
+                userBalanceNotification = NotifyUserBalance;
 
                 userID = userCount++;
             }
