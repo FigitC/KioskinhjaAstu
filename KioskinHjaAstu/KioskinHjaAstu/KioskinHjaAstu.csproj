@@ -51,6 +51,8 @@
     <Compile Include="SeasonalProduct.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Transaction.cs" />
+    <Compile Include="BuyTransaction.cs" />
+    <Compile Include="InsertCashTransaction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
