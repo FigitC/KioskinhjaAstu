@@ -24,9 +24,17 @@ namespace KioskinHjaAstu
         {
             return "SeasonalProduct: #" + productID.ToString() + " - " + name.ToString() + ", " + price.ToString() + "kr. - " + "Expiration date: " + seasonEndDate.ToString();
         }
-        private bool CheckIfSeasonalProdcutIsExpired(DateTime seasonStartDate, DateTime seasonEndDate)
+        public bool CheckIfSeasonalProdcutHasExpired()
         {
-
+            if (DateTime.Compare(seasonStartDate, seasonEndDate) >= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+
     }
 }

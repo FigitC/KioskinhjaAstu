@@ -20,5 +20,19 @@ namespace ProductTest
             //Assert
             Assert.AreEqual(expectedValue, calculatedValue);
         }
+    
+        [TestMethod]
+        public void CheckIfSeasonalProductHasExpired()
+        {
+            //Arrange
+            SeasonalProduct unitTest = new SeasonalProduct("AAU Lan Party Ticket", 200, true, true, new DateTime(2019, 2, 20, 0, 0, 0));
+
+            //Act
+            bool expectedValue = true;
+            bool calculatedValue = unitTest.CheckIfSeasonalProdcutHasExpired();
+
+            //Assert
+            Assert.AreEqual(expectedValue, calculatedValue);
+        }
     }
 }
